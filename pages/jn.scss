@@ -1,0 +1,88 @@
+@charset "utf-8";
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+}
+
+@mixin jn_cover($jn-name,$deg) {
+  .jn-#{$jn-name} {
+	.jn-before, .eye {
+	  @include transform(rotate(#{90-$deg/2}deg))
+	}
+	.text:before {
+	  content: "#{$jn-name}";
+	}
+	.jn-after {
+	  @include transform(rotate(#{90+$deg/2}deg))
+	}
+
+  }
+}
+
+.jn {
+  padding: 15px 0;
+  .dot {
+	float: left;
+	margin: 42px 20px 0;
+	background: #5af;
+	border-radius: 15px;
+	width: 15px;
+	height: 15px;
+  }
+}
+
+.jn-item {
+  float: left;
+  position: relative;
+  background: #5af;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  .jn-before {
+	content: "";
+	position: absolute;
+	background: #adf;
+	width: 45px;
+	height: 90px;
+	right: 50px;
+	bottom: 5px;
+	border-radius: 90px 0 0 90px;
+	transform-origin: right center;
+  }
+  .eye {
+	position: absolute;
+	background: #5af;
+	width: 15px;
+	height: 15px;
+	border-radius: 15px;
+	top: 28px;
+	left: 28px;
+  }
+  .text {
+	position: absolute;
+	width: 100%;
+	bottom: 15%;
+	text-align: center;
+  }
+  .jn-after {
+	position: absolute;
+	background: #adf;
+	width: 45px;
+	transform-origin: left center;
+	bottom: 5px;
+	right: 5px;
+	height: 90px;
+	border-radius: 0 90px 90px 0;
+  }
+}
+
+@include jn_cover(html, 50);
+@include jn_cover(java, 72);
+@include jn_cover(js, 30);
+@include jn_cover(node, 66);
+
+
+

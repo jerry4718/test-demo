@@ -1,0 +1,87 @@
+.jn {
+  overflow: auto; }
+  .jn .dot {
+    float: left;
+    margin: 42px 20px 0;
+    background: #5af;
+    border-radius: 15px;
+    width: 15px;
+    height: 15px; }
+
+.jn-item {
+  float: left;
+  position: relative;
+  background: #5af;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px; }
+  .jn-item .jn-before {
+    content: "";
+    position: absolute;
+    background: #adf;
+    width: 45px;
+    height: 90px;
+    right: 50px;
+    bottom: 5px;
+    border-radius: 90px 0 0 90px;
+    transform-origin: right center; }
+  .jn-item .eye {
+    position: absolute;
+    background: #5af;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: 28px;
+    left: 28px; }
+  .jn-item .text {
+    position: absolute;
+    width: 100%;
+    bottom: 15%;
+    text-align: center; }
+  .jn-item .jn-after {
+    position: absolute;
+    background: #adf;
+    width: 45px;
+    transform-origin: left center;
+    bottom: 5px;
+    right: 5px;
+    height: 90px;
+    border-radius: 0 90px 90px 0; }
+
+.jn-html .jn-before, .jn-html .eye {
+  -webkit-transform: rotate(65deg);
+  -ms-transform: rotate(65deg); }
+.jn-html .text:before {
+  content: "html"; }
+.jn-html .jn-after {
+  -webkit-transform: rotate(115deg);
+  -ms-transform: rotate(115deg); }
+
+.jn-java .jn-before, .jn-java .eye {
+  -webkit-transform: rotate(54deg);
+  -ms-transform: rotate(54deg); }
+.jn-java .text:before {
+  content: "java"; }
+.jn-java .jn-after {
+  -webkit-transform: rotate(126deg);
+  -ms-transform: rotate(126deg); }
+
+.jn-js .jn-before, .jn-js .eye {
+  -webkit-transform: rotate(75deg);
+  -ms-transform: rotate(75deg); }
+.jn-js .text:before {
+  content: "js"; }
+.jn-js .jn-after {
+  -webkit-transform: rotate(105deg);
+  -ms-transform: rotate(105deg); }
+
+.jn-node .jn-before, .jn-node .eye {
+  -webkit-transform: rotate(57deg);
+  -ms-transform: rotate(57deg); }
+.jn-node .text:before {
+  content: "node"; }
+.jn-node .jn-after {
+  -webkit-transform: rotate(123deg);
+  -ms-transform: rotate(123deg); }
+
+/*# sourceMappingURL=jn.css.map */

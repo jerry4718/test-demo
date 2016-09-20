@@ -1,0 +1,56 @@
+@charset "UTF-8";
+.box {
+  position: relative; /*相对位置*/
+  overflow: hidden;
+  float: left;
+  width: 200px;
+  height: 200px;
+  background: #aaa;
+  font-size: 40px;
+  transition: all 350ms;
+  &:before {
+	content: "";
+	position: absolute; /*绝对定位*/
+	top: 0;
+	left: -200px;
+	border-top: transparent solid 400px;
+	border-left: #5af solid 400px;
+	transition: all 350ms;
+  }
+  &:after {
+	content: "aaaaa";
+	position: absolute;
+  }
+  &:hover {
+	/*background: #6af;*/
+	&:before {
+	  top: -200px;
+	  left: 0;
+	}
+  }
+}
+
+.page {
+  position: relative;
+  width: 300px;
+  background: #5af;
+  &:after {
+	content: "";
+	position: absolute;
+	left: 300px;
+	width: 300px;
+	height: 900px;
+	background: #5af;
+	z-index: 99;
+	transform: rotateY(180deg);
+	border: #6cf solid 4px;
+	transition: all 350ms;
+	transform-origin: 0 0;
+  }
+  &:hover {
+	&:after {
+	  z-index: 99;
+	  transform: rotateZ(360deg);
+	}
+  }
+}

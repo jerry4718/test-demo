@@ -1,0 +1,28 @@
+.foo {
+  overflow: hidden;
+  position: relative;
+  margin: 20px auto;
+  display: inline-block;
+  border: 6px #000 solid;
+  &:hover {
+	.name {
+	  bottom: 25px;
+	}
+  }
+  .name {
+	position: absolute;
+	bottom: -25px;
+	color: red;
+	transition: all 250ms;
+	font-size: 25px;
+	font-weight: bold;
+	&:before {
+	  content: "";
+	  display: inline-block;
+	  width: 25px;
+	}
+  }
+  .box{
+
+  }
+}
